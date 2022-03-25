@@ -6,7 +6,7 @@ Download Code From Here and Extract it then open cmd in your directory then type
 then open config.json
 
 ```json
-"token": "YOUR_BOT_TOKEN",
+"public_key": "bot_key",
 "prefix": "BOT_PREFIX",
 ```
 
