@@ -1,10 +1,6 @@
-# Rock Bot is PowerFull Advance Discord Bot
+# Yaider Bot is PowerFull Advance Discord Bot In Spanish
 
-Rock bot have many feature like Music System With Filters , Buttons , Moderation , etc
-
-## How to Self Host
-
-[Replit_Link](https://replit.com/@KabirJaipal/all-in-one-discord-bot?v=1)
+Yider have many feature like Music System With Filters , Buttons , Moderation , etc
 
 Download Code From Here and Extract it then open cmd in your directory then type `npm install ` hit enter
 then open config.json
