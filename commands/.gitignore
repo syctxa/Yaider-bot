@@ -1,0 +1,14 @@
+/node_modules/
+/json.sqlite/
+/databases/infos/enmap.sqlite
+/databases/infos/enmap.sqlite-shm
+/databases/infos/enmap.sqlite-wal
+/databases/jointocreatemap/enmap.sqlite
+/databases/jointocreatemap/enmap.sqlite-shm
+/databases/jointocreatemap/enmap.sqlite-wal
+/databases/settings/enmap.sqlite
+/databases/settings/enmap.sqlite-shm
+/databases/settings/enmap.sqlite-wal
+/databases/setups/enmap.sqlite
+/databases/setups/enmap.sqlite-shm
+/databases/setups/enmap.sqlite-wal
