@@ -6,7 +6,7 @@ const { Aki } = require("aki-api"),
 module.exports = {
   name: "aki",
   aliases: [""],
-  description: "Play AKI",
+  description: "Juega AKINATOR",
   usage: "",
   category : "juegos",
   /**

@@ -29,7 +29,7 @@ const answers = [
 module.exports = {
   name: "8ball",
   aliases: [""],
-  description: "Play 8ball on Discord",
+  description: "Juega 8ball en Discord",
   usage: "",
   category : "juegos",
   /**
