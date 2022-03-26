@@ -8,7 +8,7 @@ require("moment-duration-format");
 module.exports = {
   name: "userinfo",
   aliases: ["uinfo"],
-  description: "Get information about a user",
+  description: "Obten informacion del usuario",
   usage: "userinfo [@USER]",
   category : "informacion",
   /**
@@ -34,13 +34,13 @@ module.exports = {
     if (!messagecount) messagecount = 0;
 
     if (roles.length > 100) {
-      roles = "There is so much roles to show.";
+      roles = "Hay muchos roles para mostrar.";
     }
 
     const status = {
       online: "Online",
-      idle: "Idle",
-      dnd: "Do Not Disturb",
+      idle: "Ausente",
+      dnd: "No molesta",
       offline: "Offline/Invisible",
     };
 
@@ -100,7 +100,10 @@ module.exports = {
     }
 
     if (member.user.id == message.guild.ownerID) {
-      acknowledgements = "Server Owner";
+      acknowledgements = "Dueño del servidor";
+    }
+    if (member.user.id == client.config.ownerid) {
+      acknowledgements = "Creador del Bot";
     }
 
     let safe = message.author.createdTimestamp;
@@ -125,7 +128,7 @@ module.exports = {
     let flags = user.user.flags.toArray().join(``);
 
     if (!flags) {
-      flags = "User doesn't have any badge";
+      flags = "El usuario no tiene ningun reconocimiento";
     }
 
     flags = flags.replace(
@@ -215,7 +218,7 @@ module.exports = {
       .send(
         new MessageEmbed()
           .setColor(config.colors.yes)
-          .setDescription(`Getting Userinfo...`)
+          .setDescription(`GObteniendo informacion del usuario...`)
       )
       .then((msg) => {
         msg.edit(
@@ -229,7 +232,7 @@ module.exports = {
               user.user.displayAvatarURL({ dynamic: true, size: 512 })
             )
             .setTitle(
-              "Information about:   " +
+              "Informacion de:   " +
                 user.user.username +
                 "#" +
                 user.user.discriminator,
@@ -237,20 +240,20 @@ module.exports = {
             )
             .addField("**❯ ID:**' ", `\`${user.id}\``, true)
             .addField(
-              "**❯ Username:**'",
+              "**❯ Nombre:**'",
               `\`${user.user.username}#${user.user.discriminator}\``,
               true
             )
             .addField(
               "**❯ Avatar:**",
-              `[\`Link to avatar\`](${user.user.displayAvatarURL({
+              `[\`Link del avatar\`](${user.user.displayAvatarURL({
                 format: "png",
               })})`,
               true
             )
-            .addField("**❯ Bot:**", `\`${user.user.bot ? "Yes" : "No"}\``, true)
+            .addField("**❯ Bot:**", `\`${user.user.bot ? "Si" : "No"}\``, true)
             .addField(
-              "**❯ Date Joined DC:**",
+              "**❯ Cuenta Creada:**",
               `\`${moment(user.user.createdTimestamp).format("LT")} ${moment(
                 user.user.createdTimestamp
               ).format("LL")}   ${moment(
@@ -259,22 +262,22 @@ module.exports = {
               true
             )
             .addField(
-              "**❯ Date Joined Server:**",
+              "**❯ Se unio al servidor:**",
               `\`${moment(user.joinedAt).format("LL LTS")}\``,
               true
             )
             .addField(
               "**❯ Messages Count:**",
               `\`${messagecount}\`
-                               **❯ Last Message:**', \`${lastMessage}\`  
-                               **❯ Last Message At:**', \`${lastMessageTime}\`  
+                               **❯ Ultimo mensaje:**', \`${lastMessage}\`  
+                               **❯ Ultimo mensaje en:**', \`${lastMessageTime}\`  
                                 `,
               true
             )
             .addField("**❯ __**Badge Information**__:**", `\`${flags}\``, true)
             .addField("**❯ __**Safety Check**__:**", `\`${safe}\``, true)
-            .addField("Permissions: ", `${permissions.join(", ")}`, true)
-            .addField("Acknowledgements: ", `${acknowledgements}`, true)
+            .addField("Permisos: ", `${permissions.join(", ")}`, true)
+            .addField("Reconocimientos: ", `${acknowledgements}`, true)
             .addField("Status", `${status[member.user.presence.status]}`, true)
             .addField("Member", [
               `**❯ Highest Role:** ${
@@ -297,7 +300,7 @@ module.exports = {
               }`,
               `\u200b`,
             ])
-            .setFooter("Coded by: Tech Boy Gaming")
+            .setFooter(client.botconfig.footertext)
             .setTimestamp()
         );
       });

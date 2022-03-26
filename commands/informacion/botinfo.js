@@ -8,7 +8,7 @@ const config = require("../../config/config.json");
 module.exports = {
   name: "botinfo",
   aliases: ["info"],
-  description: "Sends detailed info about the client",
+  description: "Manda informacion detallada del Bot",
   usage: "botinfo",
   category : "informacion",
   /**
@@ -72,7 +72,7 @@ module.exports = {
         .addField("\u200b", `\u200b`, true)
         .addField("💻 Platform", `\`\`${os.platform()}\`\``, true)
         .addField("API Latency", `\`${client.ws.ping}ms\``, true)
-        .setFooter("Mary Shop bot | Coded by ! SheepyCat#6011");
+        .setFooter(client.botconfig.footertext);
       message.channel.send(botinfo);
     });
   },

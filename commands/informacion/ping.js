@@ -3,7 +3,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "ping",
   aliases: ["api"],
-  description: "Get Bot Ping..",
+  description: "Obtener el ping del bot..",
   useage: "ping",
   category : "informacion",
   /**

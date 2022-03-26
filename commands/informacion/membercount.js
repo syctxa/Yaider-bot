@@ -3,7 +3,7 @@ const { MessageEmbed, Discord } = require("discord.js");
 module.exports = {
   name: "membercount",
   aliases: ["memberinfo"],
-  description: 'Use this command to get the guild"s member information.',
+  description: 'Usa este comando para obtener los miembros del servidor.',
   usage: "membercount",
   category: "informacion",
   run: async (client, message, args, funcs) => {
@@ -15,7 +15,7 @@ module.exports = {
       message.channel.send(embed);
     } catch (e) {
       console.error;
-      message.channel.send(`Oh no! An error occurred! \`${e.message}\`.`);
+      message.channel.send(`Oh no! Un error ocurrio! ): \`${e.message}\`.`);
     }
   },
 };

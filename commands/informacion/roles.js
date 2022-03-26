@@ -4,7 +4,7 @@ const config = require("../../config/config.json");
 module.exports = {
   name: "roles",
   aliases: ["serverroles"],
-  description: "Show all Roles of Guild",
+  description: "Muestra todos los roles del servidor",
   usage: "roles",
   category : "informacion",
   /**
@@ -27,7 +27,7 @@ module.exports = {
 
     let roless = new MessageEmbed()
       .setColor(config.colors.yes)
-      .setTitle(`**❯ All Roles Of :** ${message.guild.name}`)
+      .setTitle(`**❯ Todos los roles de :** ${message.guild.name}`)
       .setDescription(`**${roles.toString()}**`)
       .setThumbnail(message.guild.iconURL())
       .setImage(

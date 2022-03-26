@@ -21,19 +21,19 @@ module.exports = {
         (r) => r.name.toLowerCase() === args.join(" ").toLocaleLowerCase()
       ) ||
       message.channel;
-    if (!channel) return message.channel.send("**Channel Not Found!**");
+    if (!channel) return message.channel.send("**Canal no encontrado!**");
 
     let channelembed = new MessageEmbed()
-      .setTitle(`Channel informacion for ${channel.name}`)
+      .setTitle(`Informacion del canal ${channel.name}`)
       .setThumbnail(message.guild.iconURL())
       .addField("**NSFW**", channel.nsfw, true)
       .addField("**Channel ID**", channel.id, true)
       .addField("**Channel Type**", channel.type)
       .addField(
-        "**Channel Description**",
-        `${channel.topic || "No Description"}`
+        "**Descripcion del canal**",
+        `${channel.topic || "Sin descripcion"}`
       )
-      .addField("**Channel Created At**", channel.createdAt)
+      .addField("**Canal creado en**", channel.createdAt)
       .setColor("GREEN");
     message.channel.send(channelembed);
   },

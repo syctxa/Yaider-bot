@@ -3,7 +3,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "role",
   aliase: ["rl", "roleinfo"],
-  description: "This Command use For Info About a Role",
+  description: "Obten informacion de un rol",
   usage: `prefix <role>`,
   category : "informacion",
   /**
@@ -29,22 +29,22 @@ module.exports = {
             args.slice(0).join(" ").toLowerCase().trim()
         )
       )
-        return message.reply(":x: Role not found");
+        return message.reply(":x: Rol no encontrado");
     }
     if (args[0] && !isNaN(args[0])) {
       role = message.guild.roles.cache.find((e) => e.id == args[0]);
       if (!message.guild.roles.cache.has(args[0]))
-        return message.reply(":x: Role not found");
+        return message.reply(":x: Rol no encontrado");
     }
 
-    if (!role) return message.reply("You must mention role");
+    if (!role) return message.reply("Tienes que mencionar un rol");
     let rolemembers;
     if (role.members.size > 20)
       rolemembers =
         role.members
           .map((e) => `<@${e.id}>`)
           .slice(0, 20)
-          .join(", ") + ` and ${role.members.size - 20} more members...`;
+          .join(", ") + ` y ${role.members.size - 20} Mas miembros...`;
     if (role.members.size < 20)
       rolemembers = role.members.map((e) => `<@${e.id}>`).join(", ");
 
@@ -52,12 +52,12 @@ module.exports = {
       .setColor(role.color)
       .setAuthor(message.guild.name, message.guild.iconURL())
       .setDescription(
-        `**Role Name:** ${role.name}(<@&${role.id}>)\n\n
+        `**Nombre del rol:** ${role.name}(<@&${role.id}>)\n\n
             **Role ID:** **\`${role.id}\`**\n\n
-            **Role Mentionable:** ${role.mentionable
+            **Rol Mencionable:** ${role.mentionable
               .toString()
-              .replace("true", "Yes")
-              .replace("false", "No")}\n\n**Role Members Size:** ${
+              .replace("true", "Si")
+              .replace("false", "No")}\n\n**Tamaño de los miembros del rol:** ${
           role.members.size || 0
         }`
       )

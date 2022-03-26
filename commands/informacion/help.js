@@ -12,7 +12,7 @@ let color = "#36393f";
 module.exports = {
   name: "help",
   aliases: ["h"],
-  description: "Shows all available bot commands.",
+  description: "Muestra todos los comandos disponibles del bot.",
   category: "informacion",
   /**
      * 
@@ -154,7 +154,7 @@ module.exports = {
         const cmds = commands.map((command) => {
           let file = require(`../../commands/${dir}/${command}`);
 
-          if (!file.name) return "No command name.";
+          if (!file.name) return "Sin nombre del comando.";
 
           let name = file.name.replace(".js", "");
 
@@ -172,8 +172,8 @@ module.exports = {
 
         cmds.map((co) => {
           dota = {
-            name: `${cmds.length === 0 ? "In progress." : co.cname}`,
-            value: co.des ? co.des : "No Description",
+            name: `${cmds.length === 0 ? "En progreso..." : co.cname}`,
+            value: co.des ? co.des : "Sin Descripcion",
             inline: true,
           };
           catts.push(dota);
@@ -204,7 +204,7 @@ module.exports = {
           .setColor(color)
           .setThumbnail(client.user.displayAvatarURL({ format: "png" }))
           .setColor("RANDOM")
-          .setFooter(`Mary Shop bot | Coded by ! SheepyCat#6011`);
+          .setFooter(client.botconfig.footertext);
 
         return message.channel.send(combed);
       }
@@ -212,7 +212,7 @@ module.exports = {
       if (!command) {
         const embed = new MessageEmbed()
           .setTitle(
-            `Invalid command! Use \`${prefix}help\` for all of my commands!`
+            `Comando invalido! usa \`${prefix}help\` para todos mis comandos!`
           )
           .setColor("RED");
         return message.channel.send(embed);
@@ -221,29 +221,29 @@ module.exports = {
       const embed = new MessageEmbed()
         .setTitle("Command Details:")
         .addField(
-          "Command:",
-          command.name ? `\`${command.name}\`` : "No name for this command."
+          "Comando:",
+          command.name ? `\`${command.name}\`` : "Sin nombre para el comando."
         )
         .addField(
           "Aliases:",
           command.aliases
             ? `\`${command.aliases.join("` `")}\``
-            : "No aliases for this command."
+            : "No hay alias para este comando."
         )
         .addField(
-          "Usage:",
+          "Uso:",
           command.usage
             ? `\`${prefix}${command.name} ${command.usage}\``
             : `\`${prefix}${command.name}\``
         )
         .addField(
-          "Command Description:",
+          "Descripcion del comando:",
           command.description
             ? command.description
-            : "No description for this command."
+            : "No hay descripcion del comando."
         )
         .setFooter(
-          `Requested by ${message.author.tag}`,
+          `Pedido por ${message.author.tag}`,
           message.author.displayAvatarURL({
             dynamic: true,
           })

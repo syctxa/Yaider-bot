@@ -9,9 +9,9 @@ const filterLevels = {
 };
 
 const verificationLevels = {
-  NONE: "None",
-  LOW: "Low",
-  MEDIUM: "Medium",
+  NONE: "Ninguna",
+  LOW: "Baja",
+  MEDIUM: "Media",
   HIGH: "(╯°□°）╯︵ ┻━┻",
   VERY_HIGH: "┻━┻ ﾐヽ(ಠ益ಠ)ノ彡┻━┻",
 };
@@ -35,7 +35,7 @@ const regions = {
 module.exports = {
   name: "serverinfo",
   aliases: ["sinfo"],
-  description: "Shows info about a server",
+  description: "Muestra informacion acerca del servidor",
   usage: "serverinfo",
   category : "informacion",
   /**
@@ -65,34 +65,34 @@ module.exports = {
       .send(
         new MessageEmbed()
           .setColor("RED")
-          .setDescription(`Getting Serverinfo...`)
+          .setDescription(`Obteniendo informacion del servidor...`)
       )
       .then((msg) => {
         msg.edit(
           new MessageEmbed()
             .setColor("RED")
-            .setTitle("Server Info")
+            .setTitle("Informacion del servidor")
             .setThumbnail(message.guild.iconURL())
-            .setAuthor(`This Guild Name is \`\`${message.guild.name}\`\``)
-            .addField("**Guild Owner:**", `${message.guild.owner}`, true)
-            .addField("Server region", message.guild.region, true)
-            .addField("**Member Count:**", `${message.guild.memberCount}`, true)
+            .setAuthor(`El nombre de este servidor es  \`\`${message.guild.name}\`\``)
+            .addField("**Dueño del servidor:**", `${message.guild.owner}`, true)
+            .addField("Region del  servidoe", message.guild.region, true)
+            .addField("**Miembros del servidor:**", `${message.guild.memberCount}`, true)
             .addField(
-              "``Verification Level``",
+              "``Nivel de verificacion``",
               verificationLevels[message.guild.verificationLevel],
               true
             )
             .addField(
-              "``Rules Channel``",
+              "``Canal de reglas``",
               message.guild.rulesChannel
                 ? `${message.guild.rulesChannel}`
                 : "`None`",
               true
             )
-            .addField("Boost Count:-", guild.premiumSubscriptionCount)
-            .addField("Boost Level:-", guild.premiumTier)
+            .addField("Mejoras:-", guild.premiumSubscriptionCount)
+            .addField("Nivel del servidor:-", guild.premiumTier)
             .addField(
-              "Server Stats:-",
+              "Status del server:-",
               `${
                 guild.channels.cache.filter((channel) => channel.type == "text")
                   .size
@@ -110,44 +110,44 @@ module.exports = {
               }📁`
             )
             .addField(
-              "Emoji Count:-",
+              "Emojis del servidor:-",
               `${emojicount.size}\n${
                 emojicount.filter((emoji) => !emoji.animated).size
-              }(Non Animated)\n${
+              }(No animados)\n${
                 emojicount.filter((emoji) => emoji.animated).size
-              }(Animated)`
+              }(Animados)`
             )
             .addField(
-              "**Total Real Members**",
+              "**Total de usuarios**",
               message.guild.members.cache.filter((member) => !member.user.bot)
                 .size,
               true
             )
             .addField(
-              "**Total Bots**",
+              "**Total de bots**",
               message.guild.members.cache.filter((member) => member.user.bot)
                 .size,
               true
             )
             .addField(
-              "**Total Channels**",
+              "**Total de Canalels**",
               message.guild.channels.cache.size,
               true
             )
             .addField(
-              "**Total Text Channels**",
+              "**Total de canales de texto**",
               message.guild.channels.cache.filter((ch) => ch.type === "text")
                 .size,
               true
             )
             .addField(
-              "**Total Voice Channels**",
+              "**Total de canales de voz**",
               message.guild.channels.cache.filter((ch) => ch.type === "voice")
                 .size,
               true
             )
             .addField(
-              "**Created On**",
+              "**Creado en**",
               message.guild.createdAt.toLocaleString(),
               true
             )
