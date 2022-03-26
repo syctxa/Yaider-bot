@@ -3,15 +3,11 @@ module.exports = {
     aliases: ["ci"],
     category: "utilidades",
     description: "Invierte los colores de una imagen",
-    usage: "",
+    usage: "[image]",
     /**
-     * @param {Client} client
      * @param {Message} message
-     * @param {String[]} args
      */
-    run: async (client, message, args) => {
-      const user = message.mentions.users.first();
-      if(args.length > 0) {
+    run: async (message) => {
         if (message.attachments.size < 0) {
             return message.channel.send(`Porfavor añade una imagen`);
         }
@@ -30,4 +26,3 @@ module.exports = {
                   });
     }
   }
-}
