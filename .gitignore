@@ -1,6 +1,7 @@
 node_modules
 json.sqlite
 package-lock.json
+config/config.json
 databases/infos/enmap.sqlite
 databases/infos/enmap.sqlite-shm
 databases/infos/enmap.sqlite-wal
