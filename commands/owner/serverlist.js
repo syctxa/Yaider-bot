@@ -2,7 +2,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "serverlist",
   aliases: ["srlist"],
-  description: "Show the Server list Which client Joined...",
+  description: "Muestra  la lista de servidores donde se ha unido el bot",
   category: "owner",
   useage: "",
   accessableby: "",
@@ -25,13 +25,13 @@ module.exports = {
       let page = 1;
 
       let description =
-        `Total Servers - ${client.guilds.cache.size}\n\n` +
+        `Total de Servidores - ${client.guilds.cache.size}\n\n` +
         client.guilds.cache
           .sort((a, b) => b.memberCount - a.memberCount)
           .map((r) => r)
           .map(
             (r, i) =>
-              `**${i + 1}** - ${r.name} | ${r.memberCount} Members\nID - ${
+              `**${i + 1}** - ${r.name} | ${r.memberCount} Miembros\nID - ${
                 r.id
               }`
           )
@@ -75,7 +75,7 @@ module.exports = {
           }
 
           description =
-            `Total Servers - ${client.guilds.cache.size}\n\n` +
+            `Total  de Servidores - ${client.guilds.cache.size}\n\n` +
             client.guilds.cache
               .sort((a, b) => b.memberCount - a.memberCount)
               .map((r) => r)
@@ -116,7 +116,7 @@ module.exports = {
               .sort((a, b) => b.memberCount - a.memberCount)
               .map((r) => r)
               .map(
-                (r, i) => `**${i + 1}** - ${r.name} | ${r.memberCount} Members`
+                (r, i) => `**${i + 1}** - ${r.name} | ${r.memberCount} Miembros`
               )
               .slice(i0, i1)
               .join("\n");

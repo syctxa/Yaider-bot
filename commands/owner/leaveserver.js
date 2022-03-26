@@ -3,7 +3,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "leaveserver",
   aliases: ["lvs"],
-  description: "bot can leave server by this command",
+  description: "el bot puede abandonar un server",
   category: "owner",
   useage: "",
   accessableby: "",
@@ -15,22 +15,20 @@ module.exports = {
   run: async (client, message, args) => {
     let ownerid = client.config.ownerID;
     let ownerid2 = client.config.ownerid;
-    if (message.author.id === ownerid || ownerid2) {
-      if (!message.member.permissions.has("ADMINISTRATOR")) {
+    if (!message.author.id === ownerid || ownerid2) {
         return message.channel
           .send(
             new MessageEmbed()
               .setColor("RED")
               .setAuthor(message.author.tag)
               .setDescription(
-                "**You Dont Have The Permissions To Use This Command! - [ADMINISTRATOR]**"
+                "**No eres el dueño del Bot!**"
               )
               .setFooter(client.botconfig.footertext)
           )
           .then((msg) => {
             msg.delete({ timeout: 10000 });
           });
-      }
     }
 
     const guildId = args[0];
@@ -41,7 +39,7 @@ module.exports = {
           new MessageEmbed()
             .setColor("RED")
             .setAuthor(message.author.tag)
-            .setDescription("**Please Provide an Guild ID **")
+            .setDescription("**Porfavor provee un ID de un servidor **")
             .setFooter(client.botconfig.footertext)
         )
         .then((msg) => {
@@ -56,7 +54,7 @@ module.exports = {
           new MessageEmbed()
             .setColor("RED")
             .setAuthor(message.author.tag)
-            .setDescription("** This Guild Not Found .. **")
+            .setDescription("** No se encontro ese servidor! **")
             .setFooter(client.botconfig.footertext)
         )
         .then((msg) => {
@@ -68,11 +66,11 @@ module.exports = {
         new MessageEmbed()
           .setColor("RED")
           .setAuthor(message.author.tag)
-          .setDescription(`Successfully left guild: **${guild.name}**`)
+          .setDescription(`Servidor Abandonado: **${guild.name}**`)
           .setFooter(client.botconfig.footertext)
       );
     } else {
-      message.channel.send("i cant do....");
+      message.channel.send("No puedo....");
     }
   },
 };
