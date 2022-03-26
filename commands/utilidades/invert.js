@@ -1,6 +1,6 @@
 module.exports = {
     name: "invert",
-    aliases: [],
+    aliases: ["ci"],
     category: "utilidades",
     description: "Invierte los colores de una imagen",
     usage: "",
