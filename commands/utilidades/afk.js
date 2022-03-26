@@ -3,7 +3,7 @@ const { afk } = require("../../utils/etc/afk");
 
 module.exports = {
   name: "afk",
-  description: "An AFK command!",
+  description: "Un comado para estar AFK",
   category: "utilidades",
   /**
    * @param {Client} client
@@ -17,7 +17,7 @@ module.exports = {
 
     message.channel.send(
       new MessageEmbed()
-        .setDescription(`You have been set as AFK. \`${reason}\``)
+        .setDescription(`AFK establecido. \`${reason}\``)
         .setTimestamp()
         .setColor(`RANDOM`)
         .setFooter(client.botconfig.footertext)

@@ -5,7 +5,7 @@ module.exports = {
   name: "calculate",
   aliases: ["cal", "math"],
   category: "utilidades",
-  description: "Get the answer to a math problem",
+  description: "resuelve problemas matematicos",
   useage: "cal <question>",
   /**
    * @param {Client} client

@@ -4,7 +4,7 @@ module.exports = {
   name: "rolememberinfo",
   aliases: ["rmi", "rmemberinfo", "rolemember"],
   category: "utilidades",
-  description: "Shows List Of Members Having A Role",
+  description: "Muestra una lista de miembros que tienen un rol",
   usage: "m/rolememberinfo <role mention/role id>",
   /**
    * @param {Client} client
@@ -25,7 +25,7 @@ module.exports = {
         (r) => r.name.toLowerCase() === args.join(" ").toLocaleLowerCase()
       );
 
-    if (!role) return message.channel.send("**Please Enter A Valid Role!**");
+    if (!role) return message.channel.send("**Porfavor pon un rol valido**");
 
     let membersWithRole = message.guild.members.cache
       .filter((member) => {
@@ -35,12 +35,12 @@ module.exports = {
         return member.user.username;
       });
     if (membersWithRole > 2048)
-      return message.channel.send("**List Is Too Long!**");
+      return message.channel.send("**La lista es muy larga!**");
 
     let roleEmbed = new MessageEmbed()
       .setColor("BLUE")
       .setThumbnail(message.guild.iconURL({ dynamic: true }))
-      .setTitle(`Users With The ${role.name} Role!`)
+      .setTitle(`Usuarios con el rol ${role.name}`)
       .setDescription(`>>> ${membersWithRole.join("\n\n")}`);
     message.channel.send(roleEmbed);
   },

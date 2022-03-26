@@ -5,7 +5,7 @@ module.exports = {
   name: "enlarge",
   aliases: ["emogif"],
   category: "utilidades",
-  description: "Enlarges the emoji",
+  description: "agranda el emoji",
   usage: "enlarge <emoji>",
   /**
    * @param {Client} client
@@ -31,7 +31,7 @@ module.exports = {
       return message.channel.send(embed);
     } else {
       let parsed = parse(emoji, { assetType: "png" });
-      if (!parsed[0]) return message.channel.send("Invalid emoji!");
+      if (!parsed[0]) return message.channel.send("Emoji invalido!");
 
       embed.setImage(parsed[0].url);
       return message.channel.send(embed);

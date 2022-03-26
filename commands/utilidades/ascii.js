@@ -5,7 +5,7 @@ module.exports = {
   name: "ascii",
   aliases: ["i-text"],
   category: "utilidades",
-  description: "Get ascii Text",
+  description: "Transforma tu texto a ascii",
   useage: "ascii <text>",
   /**
    * @param {Client} client

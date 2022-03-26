@@ -4,7 +4,7 @@ module.exports = {
   name: "avatar",
   aliases: ["av", "pfp", "pic"],
   category: "utilidades",
-  description: "Get your own or someone else's avatar",
+  description: "Ve tu avatar o la de alguien mas",
   usage: "[user mention]",
   /**
    * @param {Client} client
@@ -17,7 +17,7 @@ module.exports = {
     let av = new MessageEmbed()
       .setColor("RED")
       .setAuthor(message.author.username)
-      .setTitle(`Here is Avatar of ${user.tag}`)
+      .setTitle(`Aqui esta el avatar de ${user.tag}`)
       .setImage(user.displayAvatarURL({ dynamic: true, size: 512 }))
       .setDescription(
         `:frame_photo: [PNG](${user.avatarURL({
@@ -25,7 +25,7 @@ module.exports = {
         })}) | :frame_photo: [JPG](${user.avatarURL({
           format: "jpg",
         })}) | :frame_photo: [WEBP](${user.avatarURL({ format: "webp" })}) |` +
-          "\nYour PFP is Op :blush:"
+          "\nTu foto es OP :blush:"
       )
       .setFooter(`\`${client.botconfig.footertext}\`` + client.user.tag);
 

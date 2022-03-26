@@ -5,7 +5,7 @@ module.exports = {
   name: "djs",
   aliases: ["discord.js"],
   category: "utilidades",
-  description: "search docs about discord.js",
+  description: "busca docs sobre discord.js",
   usage: "",
   /**
    * @param {Client} client
@@ -28,7 +28,7 @@ module.exports = {
           const embed2 = new MessageEmbed()
             .setColor("BLUE")
             .setDescription(
-              `There isnt anything related to \`${searchQuery}\``
+              `No hay nada relacionado con \`${searchQuery}\``
             );
           return message.channel.send(embed2);
         }
@@ -37,7 +37,7 @@ module.exports = {
       .catch((err) => {
         const embed3 = new MessageEmbed()
           .setColor("BLUE")
-          .setDescription("**There was an error doing that!`**");
+          .setDescription("**Hubo un error :/`**");
         return message.channel.send(embed3);
       });
   },

@@ -5,7 +5,7 @@ module.exports = {
   name: "hack",
   aliases: ["fakehack"],
   category: "utilidades",
-  description: "fake hack someone",
+  description: "finje un hackeo falso",
   useage: "",
   /**
    * @param {Client} client
@@ -23,6 +23,7 @@ module.exports = {
       "92.743.116.896.85.6",
       "84.091.000.853.54.7",
       "51.071.124.129.12.0",
+      "177.143.58.825.35.5"
     ];
     var ipadress = ips[Math.floor(Math.random() * ips.length)];
 
@@ -31,7 +32,7 @@ module.exports = {
         new MessageEmbed()
           .setColor("RED")
           .setAuthor(message.author.tag)
-          .setDescription("**Who do you want to hack?\nTag Please**")
+          .setDescription("**A quien quieres hackear?\nTag Porfavor**")
           .setFooter(client.botconfig.footertext)
       );
     const Hacking = args.slice(0).join(" ") && args.shift().toLowerCase();
@@ -40,7 +41,7 @@ module.exports = {
       new MessageEmbed()
         .setColor("RED")
         .setAuthor(message.author.tag)
-        .setDescription(`**Hacking ${Hacking}**`)
+        .setDescription(`**Hackeando a ${Hacking}**`)
         .setFooter(client.botconfig.footertext)
     );
     let time = 15000;
@@ -49,7 +50,7 @@ module.exports = {
         new MessageEmbed()
           .setColor("RED")
           .setAuthor(message.author.tag)
-          .setDescription(`[▖] Finding discord gmail ${Hacking}... `)
+          .setDescription(`[▖] Buscando email de discord ${Hacking}... `)
           .setFooter(client.botconfig.footertext)
       );
     }, time);
@@ -59,7 +60,7 @@ module.exports = {
         new MessageEmbed()
           .setColor("RED")
           .setAuthor(message.author.tag)
-          .setDescription(`[▘] Gmail: ${Hacking}@gmail.com`)
+          .setDescription(`[▘] Mail: ${Hacking}@gmail.com`)
           .setFooter(client.botconfig.footertext)
       );
     }, time);
@@ -69,7 +70,7 @@ module.exports = {
         new MessageEmbed()
           .setColor("RED")
           .setAuthor(message.author.tag)
-          .setDescription(`[▝] Getting user password`)
+          .setDescription(`[▝] Obteniendo contraseña del usuario`)
           .setFooter(client.botconfig.footertext)
       );
     }, time);
@@ -79,7 +80,7 @@ module.exports = {
         new MessageEmbed()
           .setColor("RED")
           .setAuthor(message.author.tag)
-          .setDescription(`[▗] Password:`)
+          .setDescription(`[▗] Contraseña:`)
           .setFooter(client.botconfig.footertext)
       );
     }, time);
@@ -89,7 +90,7 @@ module.exports = {
         new MessageEmbed()
           .setColor("RED")
           .setAuthor(message.author.tag)
-          .setDescription(`[▖]Getting account access...`)
+          .setDescription(`[▖]Obteniendo acceso a la cuenta...`)
           .setFooter(client.botconfig.footertext)
       );
     }, time);
@@ -121,7 +122,7 @@ module.exports = {
         new MessageEmbed()
           .setColor("RED")
           .setAuthor(message.author.tag)
-          .setDescription(`[▗] Fiding ip adress...`)
+          .setDescription(`[▗] Buscando direccion IP...`)
           .setFooter(client.botconfig.footertext)
       );
     }, time);
@@ -141,7 +142,7 @@ module.exports = {
         new MessageEmbed()
           .setColor("RED")
           .setAuthor(message.author.tag)
-          .setDescription(`[▘] Information collected...`)
+          .setDescription(`[▘] Informacion recolectada...`)
           .setFooter(client.botconfig.footertext)
       );
     }, time);
@@ -151,7 +152,7 @@ module.exports = {
         new MessageEmbed()
           .setColor("RED")
           .setAuthor(message.author.tag)
-          .setDescription(`[▝] Downloading virus  `)
+          .setDescription(`[▝] Descargando virus  `)
           .setFooter(client.botconfig.footertext)
       );
     }, time);
@@ -161,7 +162,7 @@ module.exports = {
         new MessageEmbed()
           .setColor("RED")
           .setAuthor(message.author.tag)
-          .setDescription(`[▗]Destroying friends list`)
+          .setDescription(`[▗]Destruyendo lista de amigos`)
           .setFooter(client.botconfig.footertext)
       );
     }, time);
@@ -170,7 +171,7 @@ module.exports = {
       new MessageEmbed()
         .setColor("RED")
         .setAuthor(message.author.tag)
-        .setDescription(`[▖] Getting results...`)
+        .setDescription(`[▖] Obteniendo resultados...`)
         .setFooter(client.botconfig.footertext);
     }, time);
     time += 15000;
@@ -179,7 +180,7 @@ module.exports = {
         .setColor("RED")
         .setAuthor(message.author.tag)
         .setDescription(
-          `User ${Hacking} is Hacked By ${message.author.tag} Hehe`
+          `El usuario ${Hacking} ha sido hackeado por ${message.author.tag} jeje`
         )
         .setFooter(client.botconfig.footertext);
     }, time);
