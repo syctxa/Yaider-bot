@@ -12,6 +12,9 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    if (!message.member.permissions.has("MANAGE_MESSAGES")) {
+      return message.channel.send("No tienes permisos de user este comando")
+    }
     let msg = args.slice(1).join(" ");
     let user =
       message.mentions.users.first() ||
