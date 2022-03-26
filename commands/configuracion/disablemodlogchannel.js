@@ -15,7 +15,7 @@ module.exports = {
   run: async (client, message, args) => {
     if (!message.member.permissions.has("ADMINISTRATOR"))
       return message.channel.send(
-        "**You Do Not Have The Required Permissions! - [ADMINISTRATOR]**"
+        "**a sYou Do Not Have The Required Permissions! - [ADMINISTRATOR]**"
       );
 
     const modlogchannel = message.mentions.channels.first();
