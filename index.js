@@ -19,6 +19,7 @@ require("discord-buttons")(client);
 const prefix = config.prefix;
 client.prefix = prefix;
 client.config = config;
+client.botconfig = config;
 const publickey = config.public_key;
 module.exports = client;
 client.commands = new Collection();
