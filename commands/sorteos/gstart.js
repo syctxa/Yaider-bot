@@ -170,7 +170,7 @@ module.exports = {
         .setDescription(
           `**${mentionfetch}** Has **${BonusEntries}** Extra Enteries in this giveaway!`
         )
-        .setFooter(`Coded by Tech Boy Gaming`);
+        .setFooter(client.botconfig.footertext);
       giveawayChannel.send(giveaway);
     }
     message.channel.send(`Giveaway started in ${giveawayChannel}!`);
