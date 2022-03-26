@@ -20,7 +20,7 @@ module.exports = {
     const embed = new MessageEmbed()
       .setTitle(`Enlarged version of ${emoji}`)
       .setColor("RED")
-      .setFooter(`\`Coded by: Tech Boy Gaming\``);
+      .setFooter(`\`${client.botconfig.footertext}\``);
 
     if (custom.id) {
       embed.setImage(

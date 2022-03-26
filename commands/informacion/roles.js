@@ -33,7 +33,7 @@ module.exports = {
       .setImage(
         "https://media.tenor.com/images/0dc6d37ba932ae491149cd5b747b05af/tenor.png"
       )
-      .setFooter("Mary Shop bot | Coded by ! SheepyCat#6011");
+      .setFooter(client.botconfig.footertext);
 
     message.channel.send(roless);
   },

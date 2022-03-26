@@ -32,7 +32,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription("**Who do you want to hack?\nTag Please**")
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     const Hacking = args.slice(0).join(" ") && args.shift().toLowerCase();
 
@@ -41,7 +41,7 @@ module.exports = {
         .setColor("RED")
         .setAuthor(message.author.tag)
         .setDescription(`**Hacking ${Hacking}**`)
-        .setFooter("Coded by: Tech Boy Gaming")
+        .setFooter(client.botconfig.footertext)
     );
     let time = 15000;
     setTimeout(function () {
@@ -50,7 +50,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription(`[▖] Finding discord gmail ${Hacking}... `)
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     }, time);
     time += 15000;
@@ -60,7 +60,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription(`[▘] Gmail: ${Hacking}@gmail.com`)
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     }, time);
     time += 15000;
@@ -70,7 +70,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription(`[▝] Getting user password`)
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     }, time);
     time += 15000;
@@ -80,7 +80,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription(`[▗] Password:`)
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     }, time);
     time += 15000;
@@ -90,7 +90,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription(`[▖]Getting account access...`)
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     }, time);
     time += 15000;
@@ -100,7 +100,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription(`[▘] Collecting data...  `)
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     }, time);
     time += 15000;
@@ -112,7 +112,7 @@ module.exports = {
           .setDescription(
             `[▝] Hacking all accounts linked to ${Hacking}@gmail.com....`
           )
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     }, time);
     time += 15000;
@@ -122,7 +122,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription(`[▗] Fiding ip adress...`)
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     }, time);
     time += 15000;
@@ -132,7 +132,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription(`[▖] Ip: ${ipadress}`)
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     }, time);
     time += 15000;
@@ -142,7 +142,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription(`[▘] Information collected...`)
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     }, time);
     time += 15000;
@@ -152,7 +152,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription(`[▝] Downloading virus  `)
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     }, time);
     time += 15000;
@@ -162,7 +162,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription(`[▗]Destroying friends list`)
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     }, time);
     time += 15000;
@@ -171,7 +171,7 @@ module.exports = {
         .setColor("RED")
         .setAuthor(message.author.tag)
         .setDescription(`[▖] Getting results...`)
-        .setFooter("Coded by: Tech Boy Gaming");
+        .setFooter(client.botconfig.footertext);
     }, time);
     time += 15000;
     setTimeout(function () {
@@ -181,7 +181,7 @@ module.exports = {
         .setDescription(
           `User ${Hacking} is Hacked By ${message.author.tag} Hehe`
         )
-        .setFooter("Coded by: Tech Boy Gaming");
+        .setFooter(client.botconfig.footertext);
     }, time);
     time += 3 * 1000;
   },

@@ -28,7 +28,7 @@ module.exports = {
         new MessageEmbed()
           .setColor("RED")
           .setDescription(`Getting Answer of ${args}`)
-          .setFooter(`\`Coded by: Tech Boy Gaming\``)
+          .setFooter(`\`${client.botconfig.footertext}\``)
       )
       .then((msg) => {
         msg.edit(
@@ -37,7 +37,7 @@ module.exports = {
             .setTitle("Calculator")
             .addField("Question", `\`\`\`css\n${args.join(" ")}\`\`\``)
             .addField("Answer", `\`\`\`css\n${resp}\`\`\``)
-            .setFooter(`\`Coded by: Tech Boy Gaming\``)
+            .setFooter(`\`${client.botconfig.footertext}\``)
         );
       });
   },

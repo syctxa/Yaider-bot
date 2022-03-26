@@ -20,7 +20,7 @@ module.exports = {
         .setDescription(`You have been set as AFK. \`${reason}\``)
         .setTimestamp()
         .setColor(`RANDOM`)
-        .setFooter(`Mary Shop bot | Coded by ! SheepyCat#6011`)
+        .setFooter(client.botconfig.footertext)
     );
   },
 };

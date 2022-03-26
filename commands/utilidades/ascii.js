@@ -34,7 +34,7 @@ module.exports = {
           .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
           .setTitle(`${args} converted to Ascii text`)
           .setDescription("```" + data + "```")
-          .setFooter("Coded by: Tech Boy Gaming")
+          .setFooter(client.botconfig.footertext)
       );
     });
   },

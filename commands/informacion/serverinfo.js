@@ -156,7 +156,7 @@ module.exports = {
               message.guild.roles.cache.size.toString(),
               true
             )
-            .setFooter("Mary Shop bot | Coded by ! SheepyCat#6011")
+            .setFooter(client.botconfig.footertext)
         );
       });
   },

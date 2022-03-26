@@ -22,7 +22,7 @@ module.exports = {
             .setDescription(
               "**You Dont Have The Permissions To Warn Users! - [MANAGE_MESSAGES]**"
             )
-            .setFooter("Coded by: Tech Boy Gaming")
+            .setFooter(client.botconfig.footertext)
         )
         .then((msg) => {
           msg.delete({ timeout: 10000 });
@@ -37,7 +37,7 @@ module.exports = {
             .setColor("RED")
             .setAuthor(message.author.tag)
             .setDescription("**Please Mention a Channel **")
-            .setFooter("Coded by: Tech Boy Gaming")
+            .setFooter(client.botconfig.footertext)
         )
         .then((msg) => {
           msg.delete({ timeout: 10000 });
@@ -61,7 +61,7 @@ module.exports = {
         .setTitle("Welcome Channel")
         .setDescription(`${channel} has been set as a Welcome Channel`)
         .setThumbnail("https://i.imgur.com/ZDgirZI.jpg")
-        .setFooter("Coded by: Tech Boy Gaming");
+        .setFooter(client.botconfig.footertext);
       message.channel.send(welcome);
     });
   },

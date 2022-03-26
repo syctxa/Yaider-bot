@@ -25,7 +25,7 @@ module.exports = {
               .setDescription(
                 "**You Dont Have The Permissions To Use This Command! - [ADMINISTRATOR]**"
               )
-              .setFooter("Mary Shop bot | Coded by ! SheepyCat#6011")
+              .setFooter(client.botconfig.footertext)
           )
           .then((msg) => {
             msg.delete({ timeout: 10000 });
@@ -42,7 +42,7 @@ module.exports = {
             .setColor("RED")
             .setAuthor(message.author.tag)
             .setDescription("**Please Provide an Guild ID **")
-            .setFooter("Mary Shop bot | Coded by ! SheepyCat#6011")
+            .setFooter(client.botconfig.footertext)
         )
         .then((msg) => {
           msg.delete({ timeout: 10000 });
@@ -57,7 +57,7 @@ module.exports = {
             .setColor("RED")
             .setAuthor(message.author.tag)
             .setDescription("** This Guild Not Found .. **")
-            .setFooter("Mary Shop bot | Coded by ! SheepyCat#6011")
+            .setFooter(client.botconfig.footertext)
         )
         .then((msg) => {
           msg.delete({ timeout: 10000 });
@@ -69,7 +69,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setDescription(`Successfully left guild: **${guild.name}**`)
-          .setFooter("Mary Shop bot | Coded by ! SheepyCat#6011")
+          .setFooter(client.botconfig.footertext)
       );
     } else {
       message.channel.send("i cant do....");
