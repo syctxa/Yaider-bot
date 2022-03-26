@@ -6,7 +6,7 @@ module.exports = {
   name: "setlogchannel",
   aliases: ["setm", "sm", "smc", "setmodlog"],
   category: "configuracion",
-  description: "Sets A Channel Where The client Can Send Moderation Logs!",
+  description: "Configura un canal donde se mandaran los registros de moderacion",
   usage: "[channel mention | channel ID | channel name]",
   /**
    * @param {Client} client
@@ -16,21 +16,21 @@ module.exports = {
   run: async (client, message, args) => {
     if (!message.member.hasPermission("MANAGE_GUILD"))
       return message.channel
-        .send("You do not have permission to use this command.")
+        .send("No tienes permiso para usar este comando.")
         .then((m) => m.delete({ timeout: 5000 })); // if the user does not have perms
 
     const channel = await message.mentions.channels.first();
     if (!channel)
       return message.channel
         .send(
-          "I cannot find that channel. Please mention a channel within this server."
+          "No puede encontrar ese canal. Porfavor mencione un canal valido en el servidor."
         ) // if the user do not mention a channel
         .then((m) => m.delete({ timeout: 5000 }));
 
     let webhookid;
     let webhooktoken;
     await channel
-      .createWebhook("Rock lOGGER", {
+      .createWebhook("Yaider lOGGER", {
         avatar: message.guild.iconURL({ format: "png" }),
       })
       .then((webhook) => {
@@ -62,7 +62,7 @@ module.exports = {
             .catch((err) => console.error(err));
 
           return message.channel.send(
-            `The log channel has been set to ${channel}`
+            `El canal de registros es ${channel}`
           );
         } else {
           guild
@@ -75,7 +75,7 @@ module.exports = {
             .catch((err) => console.error(err));
 
           return message.channel.send(
-            `The log channel has been updated to ${channel}`
+            `El canal de registros ahora es ${channel}`
           );
         }
       }

@@ -8,7 +8,7 @@ module.exports = {
   name: "join2createsetup",
   aliases: ["j2c", "join2create"],
   category : "configuracion",
-  description: "Setup join2create in Guild",
+  description: "Configura join2create en el servidor",
   usage: "",
   /**
    * @param {Client} client
@@ -21,7 +21,7 @@ module.exports = {
         new MessageEmbed()
           .setColor(ee.colour)
           .setFooter(ee.footertext, ee.footericon)
-          .setTitle(":x: You don't have enough Permissions!")
+          .setTitle(":x: No tiense los permisos suficientes!")
       );
 
     let { channel } = message.member.voice;
@@ -29,10 +29,10 @@ module.exports = {
     if (channel) {
       message.reply(
         new MessageEmbed()
-          .setTitle("Setup Complete for Join to Create")
+          .setTitle("Configuracion completada para Join to Create")
           .setColor(ee.color)
           .setDescription(
-            ` Channel: \`${channel.name}\`\n Now is Join to Create Channel!`
+            ` Channel: \`${channel.name}\`\n Ahora es Join to Create !`
           )
           .setFooter(ee.footertext, ee.footericon)
       );
@@ -57,10 +57,10 @@ module.exports = {
           if (message.channel.parent) vc.setParent(message.channel.parentID);
           message.reply(
             new MessageEmbed()
-              .setTitle(" Setup Complete for Join to Create")
+              .setTitle(" Configuracion completada para Join to Create")
               .setColor(ee.color)
               .setDescription(
-                ` Channel: \`${channel.name}\`\n Created For You!`
+                ` Channel: \`${channel.name}\`\n Creado para ti!`
               )
               .setFooter(ee.footertext, ee.footericon)
           );

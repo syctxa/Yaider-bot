@@ -15,7 +15,7 @@ module.exports = {
   run: async (client, message, args) => {
     if (!message.member.permissions.has("ADMINISTRATOR"))
       return message.channel.send(
-        "**a sYou Do Not Have The Required Permissions! - [ADMINISTRATOR]**"
+        "**No tienes los permisos suficientes! - [ADMINISTRATOR]**"
       );
 
     const modlogchannel = message.mentions.channels.first();
@@ -26,7 +26,7 @@ module.exports = {
           .setColor("RED")
           .setAuthor(message.author.tag)
           .setTitle(
-            `Please Mention modlogchannel to Disable Mod Log in This Guild `
+            `Porfavor menciona modlogchannel para desactivar Mod Log en este servidor `
           )
       );
     }
@@ -35,10 +35,10 @@ module.exports = {
       !modlogchannel ===
       !client.channels.cache.find((ch) => ch.name === "modlogchannel")
     ) {
-      message.channel.send(`Plz mention modlog`);
+      message.channel.send(`Poefavor menciona modlog`);
     } else {
       modlogchannel.delete();
-      message.channel.send("modlog deleted.");
+      message.channel.send("modlog eliminado.");
     }
   },
 };
