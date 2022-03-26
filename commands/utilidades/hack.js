@@ -44,7 +44,7 @@ module.exports = {
         .setDescription(`**Hackeando a ${Hacking}**`)
         .setFooter(client.botconfig.footertext)
     );
-    let time = 15000;
+    let time = 1000;
     setTimeout(function () {
       msg.edit(
         new MessageEmbed()
@@ -54,7 +54,7 @@ module.exports = {
           .setFooter(client.botconfig.footertext)
       );
     }, time);
-    time += 15000;
+    time += 1000;
     setTimeout(function () {
       msg.edit(
         new MessageEmbed()
@@ -64,7 +64,7 @@ module.exports = {
           .setFooter(client.botconfig.footertext)
       );
     }, time);
-    time += 15000;
+    time += 1000;
     setTimeout(function () {
       msg.edit(
         new MessageEmbed()
@@ -74,7 +74,7 @@ module.exports = {
           .setFooter(client.botconfig.footertext)
       );
     }, time);
-    time += 15000;
+    time += 1000;
     setTimeout(function () {
       msg.edit(
         new MessageEmbed()
@@ -84,7 +84,7 @@ module.exports = {
           .setFooter(client.botconfig.footertext)
       );
     }, time);
-    time += 15000;
+    time += 1000;
     setTimeout(function () {
       msg.edit(
         new MessageEmbed()
@@ -94,7 +94,7 @@ module.exports = {
           .setFooter(client.botconfig.footertext)
       );
     }, time);
-    time += 15000;
+    time += 1000;
     setTimeout(function () {
       msg.edit(
         new MessageEmbed()
@@ -104,7 +104,7 @@ module.exports = {
           .setFooter(client.botconfig.footertext)
       );
     }, time);
-    time += 15000;
+    time += 1000;
     setTimeout(function () {
       msg.edit(
         new MessageEmbed()
@@ -116,7 +116,7 @@ module.exports = {
           .setFooter(client.botconfig.footertext)
       );
     }, time);
-    time += 15000;
+    time += 1000;
     setTimeout(function () {
       msg.edit(
         new MessageEmbed()
@@ -136,7 +136,7 @@ module.exports = {
           .setFooter(client.botconfig.footertext)
       );
     }, time);
-    time += 15000;
+    time += 1000;
     setTimeout(function () {
       msg.edit(
         new MessageEmbed()
@@ -146,7 +146,7 @@ module.exports = {
           .setFooter(client.botconfig.footertext)
       );
     }, time);
-    time += 15000;
+    time += 1000;
     setTimeout(function () {
       msg.edit(
         new MessageEmbed()
@@ -156,7 +156,7 @@ module.exports = {
           .setFooter(client.botconfig.footertext)
       );
     }, time);
-    time += 15000;
+    time += 1000;
     setTimeout(function () {
       msg.edit(
         new MessageEmbed()
@@ -166,7 +166,7 @@ module.exports = {
           .setFooter(client.botconfig.footertext)
       );
     }, time);
-    time += 15000;
+    time += 1000;
     setTimeout(function () {
       new MessageEmbed()
         .setColor("RED")
@@ -174,7 +174,7 @@ module.exports = {
         .setDescription(`[▖] Obteniendo resultados...`)
         .setFooter(client.botconfig.footertext);
     }, time);
-    time += 15000;
+    time += 1000;
     setTimeout(function () {
       new MessageEmbed()
         .setColor("RED")
