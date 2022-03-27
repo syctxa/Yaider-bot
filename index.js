@@ -62,10 +62,6 @@ client.infos = new Enmap({
   name: "infos",
   dataDir: "./databases/infos",
 });
-client.jointocreatemap = new Enmap({
-  name: "settings",
-  dataDir: "./databases/jointocreatemap",
-});
 
 /// giveawat bot
 
