@@ -3,6 +3,7 @@ const { Client, Message, MessageEmbed, Collection, Intents } = require("discord.
 const fs = require("fs");
 const colors = require("colors");
 const config = require("./config/config.json");
+const botconfig = require("./config/bot.json");
 const map = new Map();
 global.client = new Client({
     intents: [
@@ -19,7 +20,7 @@ require("discord-buttons")(client);
 const prefix = config.prefix;
 client.prefix = prefix;
 client.config = config;
-client.botconfig = config;
+client.botconfig = botconfig;
 const publickey = config.public_key;
 module.exports = client;
 client.commands = new Collection();
