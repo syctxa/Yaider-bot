@@ -59,7 +59,7 @@ module.exports = {
       .setFooter(client.botconfig.footertext)
       .setThumbnail(banMember.user.displayAvatarURL())
       .setDescription(
-        `> Has sido banneado de ${message.guild.name} por ${reason}.\nAppeals: ${client.botconfig.ban_appeal}`
+        `> Has sido banneado de ${message.guild.name} por ${reason}.\n**Appeals**: ${client.botconfig.ban_appeal}`
       );
     let i = 0;
     banMember.send(Sembed).catch((err) => console.log(err.toString().red));
